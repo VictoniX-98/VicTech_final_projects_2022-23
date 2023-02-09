@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Login</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" media="all" />
+</head>
+
+<body>
+	<!-- login form -->
+	<section class="w3l-login">
+		<div class="overlay">
+			<div class="wrapper">
+				<div class="logo">
+					<a class="brand-logo" href="#">Login form</a>
+				</div>
+				<div class="form-section">
+					<h3>Login</h3>
+					<h6>To continue with Us</h6>
+					<form action="#" method="post" class="signin-form">
+						{% csrf_token %}
+						<div class="form-input">
+							<input type="text" name="username" placeholder="Username" required="" autofocus>
+						</div>
+						<div class="form-input">
+							<input type="password" name="password" placeholder="Password" required="">
+						</div>
+						{% for message in messages %}
+							<p class="{{ message.tags }}">
+								{{message}}
+							</p>
+						{% endfor %}
+						<button type="submit" class="btn btn-primary theme-button mt-4">Log in</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id='stars'></div>
+		<div id='stars2'></div>
+		<div id='stars3'></div>
+
+		<!-- copyright -->
+		<div class="copy-right">
+			<p>&copy; 2023 - DIT. All rights reserved | Design by <a href="#" target="_blank">Tute Goyai</a></p>
+		</div>
+		<!-- //copyright -->
+	</section>
+
+	<!-- /login form -->
+</body>
+
+</html>
