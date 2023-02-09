@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block page_title %} Admin pannel {% endblock %} </title>
+    {% block links %}
+        <link rel="stylesheet" href="{% static 'css/admin_page.css' %}">
+        <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <!-- Title bar and menu -->
+    <div class="heading">
+        <div class="title">
+            Sanitary Towel
+        </div>
+        <div class="menu">
+            <ul>
+                <li>{% block username %}  VictoniX {% endblock %}</li>
+                <li>{% block logout_link %} <a id="logout_link" href=""> logout </a> {% endblock %}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Ending of Title bar -->
+
+    <!-- Login status Notifacation -->
+    <div class="status">
+        <span> {% block page_status %} Admin Pannel {% endblock %} </span> 
+    </div>
+    <!-- End of login status -->
+    
+    <!-- Details -->
+
+    {% block details %}
+        <div class="details">
+            <div class="sales">
+                <span id="title">Sales</span><hr>
+                <strong>123</strong>
+            </div>
+            <div class="revenue">
+                <span id="title">Revenue</span><hr>
+                <strong>123</strong> TSh.
+            </div>
+            <div class="customers">
+                <span id="title">Customers</span><hr>
+                <strong>123</strong>
+            </div>
+        </div>
+    {% endblock %}
+    <!-- End Details -->
+
+    <!-- Costormers view-->
+    {% block views %}
+        <div class="costomer_views">
+            <form class="search_form" action="">
+                <input type="text" placeholder="Custormer username">
+                <input type="submit" value="Search">
+            </form>
+            <span id="table_title">Customer details</span>
+            <table class="costormer_table">
+                <thead>
+                    <tr>
+                        <th>USERNAME</th>
+                        <th>CARD NO.</th>
+                        <th>BALANCE</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="">name</a></td>
+                        <td>card_no</td>
+                        <td>1238930 TSh.</td>
+                        <td><span id="status">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">name</a></td>
+                        <td>card_no</td>
+                        <td>balance</td>
+                        <td><span id="status">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">name</a></td>
+                        <td>card_no</td>
+                        <td>balance</td>
+                        <td><span id="status">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">name</a></td>
+                        <td>card_no</td>
+                        <td>balance</td>
+                        <td><span id="status">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
+    <!-- End of customers view -->
+
+    <!-- Costormer registration -->
+    {% block form %}
+        <div class="admin_reg">
+            <center>
+                <h2 id="form_title">Registration Form</h2>
+                <form action="">
+                    <input type="text" name="username" placeholder="Username"><br>
+                    <input type="text" name="first_name" placeholder="First name"><br>
+                    <input type="text" name="last_name" placeholder="Last name"><br>
+                    <input type="email" name="email" placeholder="Email"><br>
+                    <input type="text" name="card_no" placeholder="Card number"><br>
+                    <input type="password" name="password1" placeholder="Password"><br>
+                    <input type="password" name="password2" placeholder="Confirm password"><br>
+                    <input id="form_btn" type="submit" value="Register">
+                </form>
+            </center>
+        </div>
+    {% endblock %}
+    <!-- End of cistomer registration -->
+
+    <Footer>
+        <center>
+            <hr>
+            &copy; Copyright <strong>DIT</strong>, Projects 2022/23 <br>
+            Engineer: <strong>Jesca Alex</strong>
+        </center>
+    </Footer>
+
+</body>
+</html>

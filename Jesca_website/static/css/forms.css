@@ -1,0 +1,48 @@
+.admin_reg, .login_form, .reg_form{
+    width: 30vw;
+    background-color: #fff;
+    position: absolute;
+}
+
+.admin_reg{
+    height: 420px;
+    left: 67.5vw;
+    margin-top: 180px;
+}
+
+.login_form, .reg_form{
+    width: 30vw;
+    left: 35vw;
+}
+
+.login_form{
+    height: 320px;
+}
+
+.reg_form{
+    height: 460px;
+}
+
+.admin_reg form, .login_form form, .reg_form form{
+    height: 100%;
+    width: 99%;
+}
+
+.admin_reg form input, .login_form form input, .reg_form form input{
+    margin: 5px 0;
+    height: 20px;
+    width: 70%;
+}
+
+#form_btn{
+    color: #fff;
+    height: 40px;
+    font-size: 20px;
+    background-color: #332c81;
+}
+
+#form_title{
+    margin-top: 30px;
+    font-size: 30px;
+    color: #332c81;
+}

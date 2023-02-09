@@ -1,0 +1,96 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% block page_title %}  Dashboard {% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/admin_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/customer_page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+{% endblock %}
+
+{% block username %} VictoniX {% endblock %}         <!-- Username come here -->
+{% block page_status %} Dashboard {% endblock %}
+
+<!-- Electronics money details  -->
+{% block details %}
+    <div class="balance">
+        <span id="title">Balance</span>
+        <hr>
+        <strong>123</strong>Tsh.
+    </div>
+{% endblock %}
+
+<!-- Customer details views -->
+{% block views %}
+    <div class="costomer_views">
+        <span id="table_title">Account details</span>
+        <div class="permisions">
+            <center>
+                <a id="active" href="">Activate</a>
+                <a id="block" href="">Block</a>
+                <a id="delete" href="">Delete</a>
+            </center>
+        </div>
+        <hr id="details_line">
+        <table class="account_details">
+            <tbody>
+                <tr>
+                    <th>Username:</th>
+                    <td>VictoniX</td>
+                </tr>
+                <tr>
+                    <th>First name:</th>
+                    <td>Victor</td>
+                </tr>
+                <tr>
+                    <th>Last name:</th>
+                    <td>Magayane</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>victormagayane98@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Card number:</th>
+                    <td>196030722014</td>
+                </tr>
+
+                <tr>
+                    <th>Natinality:</th>
+                    <td>Tanzanian</td>
+                </tr>
+
+                <tr>
+                    <th>Address:</th>
+                    <td>Buguruni, Rozana</td>
+                </tr>
+
+                <tr>
+                    <th>Birthday:</th>
+                    <td>09/07/1998</td>
+                </tr>
+                <tr>
+                    <th>Reg. date:</th>
+                    <td>21/02/2022</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+<!-- This block is empty since we dont have any form in this page -->
+{% block form %}
+<!-- Customer transaction details -->
+<div class="trans_details">
+    <span id="table_title">Transaction details</span>
+    <hr id="details_line">
+    <table class="details">
+        <tbody>
+            <tr>
+                <th>date</th>
+                <td>details</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
