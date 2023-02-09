@@ -1,0 +1,52 @@
+.side_img{
+    float: left;
+    margin:30px 0 60px 50px;
+    border: solid 10px #f1f7fd;
+}
+
+#reg_img{
+    margin-left: 150px;
+}
+
+.side_form{
+    float: left;
+    width: 30vw;
+    margin-top: 30px;
+    height: 448px;
+    background-color: #f1f7fd;
+}
+
+.side_form h1{
+    color: #2c4964;
+    font-weight: bolder;
+}
+
+#reg_form{
+    height: 488px;
+}
+
+.side_form form{
+    margin-top: 70px;
+}
+
+#reg_form form{
+    margin-top: 40px;
+}
+
+.side_form form input{
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#reg_form form input{
+    height: 40px;
+    margin-top: 13px;
+}
+
+.side_form form #submit_btn{
+    color: #fff;
+    background-color: #1977cc;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
