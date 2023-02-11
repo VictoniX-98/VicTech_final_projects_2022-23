@@ -1,0 +1,33 @@
+{% extends 'hospital_login.html' %}
+{% load static %}
+
+{% block title %} Registration Page {% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/forms.css' %}">
+{% endblock %}
+{% block content %}
+
+    <div class="auth_form">
+        <div class="side_img">
+            <img src="{% static 'assets/img/ambulance.jpeg' %}" alt="Login_IMG">
+        </div>
+        <div id="reg_form" class="side_form">
+            <center>
+                <form action="">
+                    <h1>Hospital Registration</h1>
+                    <input type="text" name="hospital_name" placeholder=" Hospital name" required>
+                    <input type="text" name="hospital_reg_number" placeholder=" Hospital registration number" required>
+                    <input type="text" name="latitude" placeholder=" Latitude" required>
+                    <input type="text" name="logitude" placeholder=" Longitude" required>
+                    <input type="password" name="password1" placeholder=" Password" required>
+                    <input type="password" name="password2" placeholder=" Comfirm password" required>
+                    <input id="submit_btn" type="submit" value="Register">
+                </form>
+    
+                Allread have an Account: <a href="{% url 'hospital_login' %}">Login</a>
+            </center>
+        </div>
+    </div>
+    
+{% endblock %}

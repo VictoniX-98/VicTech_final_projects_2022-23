@@ -1,1 +1,1 @@
-web: gunicorn my_final_year_project_website.wsgi:application --log-file -
+web: gunicornm y_final_year_project_website.wsgi:application --log-file -
